@@ -50,7 +50,7 @@ function NavFolder(props: ParentProps & { name: string }) {
 
 export function Nav() {
   return (
-    <div class="bg-stone-700/50 p-1 overflow-hidden">
+    <div class="bg-stone-700/50 h-full p-1 overflow-hidden">
       <NavItem href="/" name="index.html" />
       <NavFolder name="Folder Name">
         <NavItem href="/foo" />
