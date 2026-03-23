@@ -52,6 +52,10 @@ export function Nav() {
   return (
     <div class="bg-stone-700/50 h-full p-1 overflow-hidden">
       <NavItem href="/" name="index.html" />
+      <NavFolder name="3D Printing">
+        <NavItem href="/3dprinting/README.md" name="README.md" />
+      </NavFolder>
+
       <NavFolder name="Folder Name">
         <NavItem href="/foo" />
         <NavItem href="/bar" />

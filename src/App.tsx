@@ -4,15 +4,16 @@
 import { Router, Route } from '@solidjs/router';
 import './App.css';
 import { indexHtml } from './pages/index-html';
-import { foo } from './pages/foo';
 import { Layout } from './components/Layout';
+import { ReadmeMd } from './pages/3dprinting/Readme-md';
 
 function App() {
   return (
     <Router>
       <Route component={Layout}>
         <Route path="/" component={indexHtml} />
-        <Route path="/foo" component={foo} />
+        <Route path="/3dprinting/readme.md" component={ReadmeMd} />
+
         <Route path="/*" component={indexHtml} />
       </Route>
     </Router>
