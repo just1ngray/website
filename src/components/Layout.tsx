@@ -40,7 +40,7 @@ export function Layout(props: ParentProps) {
         <div class={`grow ${smallNavOpen() ? "hidden md:inline-block" : ""}`}>
           <div class="p-2 flex flex-row items-center text-stone-400">
             <span>{window.location.origin}</span>
-            <For each={location.pathname.split("/").filter(part => part.length > 0)}>
+            <For each={(location.pathname.substring(1) || "index.html").split("/")}>
               {part => <>
                 <ChevronIcon />
                 <span>{part}</span>
@@ -57,7 +57,7 @@ export function Layout(props: ParentProps) {
       </div>
 
       <div class="bg-stone-700 px-4 flex flex-col sm:flex-row sm:justify-between sm:items-center">
-        <div class="pb-2 md:pb-0">Not a UI designer or front-end developer... clearly :)</div>
+        <div class="pb-2 md:pb-0">Me and CSS have... an understanding :)</div>
         <div class="flex flex-col sm:flex-row gap-2">
           <a href="https://grafana.jpgray.ca">
             <div class="p-1 hover:bg-stone-600">Grafana</div>
