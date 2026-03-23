@@ -12,10 +12,6 @@ export function Layout(props: ParentProps) {
 
   return (
     <div class="min-h-dvh flex flex-col bg-stone-800 text-stone-200">
-      <div class="bg-stone-700 px-4 py-1">
-        jpgray.ca
-      </div>
-
       <div class="flex-1 flex flex-row">
         {/* external links and a dummy 'home' link  */}
         <div class="text-stone-400 p-1 flex flex-col gap-2">
@@ -57,9 +53,17 @@ export function Layout(props: ParentProps) {
         </div>
       </div>
 
-      <div class="bg-stone-700 px-4 py-1">
-        Not a UI designer or front-end developer... clearly :)
+      <div class="bg-stone-700 px-4 flex flex-row justify-between items-center">
+        <div>Not a UI designer or front-end developer... clearly :)</div>
+        <div class="flex flex-row gap-2">
+          <a href="https://grafana.jpgray.ca">
+            <div class="p-1 hover:bg-stone-600">Grafana</div>
+          </a>
+          <a href="https://whoami.jpgray.ca">
+            <div class="p-1 hover:bg-stone-600">Whoami</div>
+          </a>
+        </div>
       </div>
     </div>
-  )
+  );
 }
