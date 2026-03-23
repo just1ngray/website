@@ -8,15 +8,17 @@ function NavItem(props: { name?: string, href: string, }) {
   const location = useLocation();
 
   return (
+    <A href={props.href}>
       <div class="relative cursor-pointer group p-1">
         <div class={`absolute inset-y-0 -left-[9999px] right-0
                      ${location.pathname == props.href ? "bg-stone-600" : "group-hover:bg-stone-600/50"}
         `} />
         <div class="relative flex flex-row">
           <div class="mr-1"><CodeIcon /></div>
-          <A href={props.href}>{props.name || props.href.slice(1)}</A>
+          <span>{props.name || props.href.slice(1)}</span>
         </div>
       </div>
+    </A>
     );
 }
 
