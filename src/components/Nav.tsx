@@ -6,15 +6,14 @@ import { CodeIcon } from "../icons/Code";
 
 function NavItem(props: { name?: string, href: string, }) {
   return (
-    <div class="cursor-pointer hover:bg-stone-600 p-1">
-      <div class="flex flex-row">
-        <div class="mr-1">
-          <CodeIcon />
+      <div class="relative cursor-pointer group p-1">
+        <div class="absolute inset-y-0 -left-[9999px] right-0 group-hover:bg-stone-600/50" />
+        <div class="relative flex flex-row">
+          <div class="mr-1"><CodeIcon /></div>
+          <A href={props.href}>{props.name || props.href}</A>
         </div>
-        <A href={props.href}>{props.name || props.href}</A>
       </div>
-    </div>
-  );
+    );
 }
 
 function NavFolder(props: ParentProps & { name: string }) {
@@ -23,7 +22,7 @@ function NavFolder(props: ParentProps & { name: string }) {
   return (
     <div>
       <div
-        class="flex flex-row cursor-pointer hover:bg-stone-600 p-1"
+        class="flex flex-row cursor-pointer hover:bg-stone-600/50 p-1"
         onClick={() => setIsOpen(!isOpen())}
       >
         <div class={isOpen() ? "rotate-90" : ""}>
@@ -32,7 +31,7 @@ function NavFolder(props: ParentProps & { name: string }) {
         <div>{props.name}</div>
       </div>
       <Show when={isOpen()}>
-        <div class="ml-4 pl-1 border-l">
+        <div class="ml-4 pl-1 border-l-2 border-stone-400">
           {props.children}
         </div>
       </Show>
@@ -43,16 +42,14 @@ function NavFolder(props: ParentProps & { name: string }) {
 
 export function Nav() {
   return (
-    <div class="flex flex-row">
-      <div class="min-h-dvh bg-stone-700/50 p-1">
-        <NavItem href="/" name="index.html" />
-        <NavFolder name="Folder Name">
-          <NavItem href="foo" />
-          <NavItem href="bar" />
-          <NavItem href="baz" />
-        </NavFolder>
-        <NavItem href="foobarbaz" />
-      </div>
+    <div class="min-h-dvh bg-stone-700/50 p-1 overflow-hidden">
+      <NavItem href="/" name="index.html" />
+      <NavFolder name="Folder Name">
+        <NavItem href="foo" />
+        <NavItem href="bar" />
+        <NavItem href="baz" />
+      </NavFolder>
+      <NavItem href="foobarbaz" />
     </div>
   );
 }
