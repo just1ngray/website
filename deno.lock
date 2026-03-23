@@ -1,6 +1,7 @@
 {
   "version": "5",
   "specifiers": {
+    "npm:@solidjs/router@~0.16.1": "0.16.1_solid-js@1.9.11",
     "npm:@tailwindcss/vite@^4.2.2": "4.2.2_vite@8.0.1__@types+node@24.12.0",
     "npm:@types/node@^24.12.0": "24.12.0",
     "npm:solid-js@^1.9.11": "1.9.11",
@@ -282,6 +283,12 @@
     },
     "@rolldown/pluginutils@1.0.0-rc.10": {
       "integrity": "sha512-UkVDEFk1w3mveXeKgaTuYfKWtPbvgck1dT8TUG3bnccrH0XtLTuAyfCoks4Q/M5ZGToSVJTIQYCzy2g/atAOeg=="
+    },
+    "@solidjs/router@0.16.1_solid-js@1.9.11": {
+      "integrity": "sha512-IhyjedgC6LRpw/8CPGGI89FrV+r0xTHzOl2c4CRyzYQ1bLepJxbVI1LLKvsavMWY5TRBRacV7hAeOhuTXkjiqg==",
+      "dependencies": [
+        "solid-js"
+      ]
     },
     "@tailwindcss/node@4.2.2": {
       "integrity": "sha512-pXS+wJ2gZpVXqFaUEjojq7jzMpTGf8rU6ipJz5ovJV6PUGmlJ+jvIwGrzdHdQ80Sg+wmQxUFuoW1UAAwHNEdFA==",
@@ -792,6 +799,7 @@
   "workspace": {
     "packageJson": {
       "dependencies": [
+        "npm:@solidjs/router@~0.16.1",
         "npm:@tailwindcss/vite@^4.2.2",
         "npm:@types/node@^24.12.0",
         "npm:solid-js@^1.9.11",
