@@ -11,9 +11,12 @@ export function Layout(props: ParentProps) {
   const location = useLocation();
 
   return (
-    <div class="bg-stone-800 min-h-dvh text-stone-200">
-      <div class="flex flex-row">
+    <div class="min-h-dvh flex flex-col bg-stone-800 text-stone-200">
+      <div class="bg-stone-700 px-4 py-1">
+        jpgray.ca
+      </div>
 
+      <div class="flex-1 flex flex-row">
         {/* external links and a dummy 'home' link  */}
         <div class="text-stone-400 p-1 flex flex-col gap-2">
           <div class="cursor-pointer text-stone-100">
@@ -52,7 +55,10 @@ export function Layout(props: ParentProps) {
             {props.children}
           </main>
         </div>
+      </div>
 
+      <div class="bg-stone-700 px-4 py-1">
+        Not a UI designer or front-end developer... clearly :)
       </div>
     </div>
   )
