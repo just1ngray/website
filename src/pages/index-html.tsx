@@ -14,7 +14,7 @@ function formatDateTimeMyWay(date: Date, timeZone='America/Halifax') {
     hour12: true,
   }).formatToParts(date);
 
-  const get = (type) => parts.find(p => p.type === type).value;
+  const get = (type: string) => parts.find(p => p.type === type)!.value;
 
   const ampm = get('dayPeriod').toLowerCase().replaceAll(".", "");
   return `${get('year')}-${get('month')}-${get('day')} ${get('hour')}:${get('minute')}:${get('second')} ${ampm}`;
