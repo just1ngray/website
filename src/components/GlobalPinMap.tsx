@@ -3,7 +3,8 @@ import Globe from "globe.gl";
 import * as THREE from "three";
 
 
-export function GlobalPinMap(props: { lng: number, lat: number, col?: string }) {
+/* Import with solid-js.lazy to avoid including large THREE and globe.gl in the main bundle */
+export default function GlobalPinMap(props: { lng: number, lat: number, col?: string }) {
   let containerRef!: HTMLDivElement;
 
   onMount(() => {

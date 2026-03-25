@@ -1,5 +1,6 @@
-import { createSignal, onMount, onCleanup } from "solid-js";
-import { GlobalPinMap } from "../components/GlobalPinMap";
+import { createSignal, onMount, onCleanup, lazy, Suspense } from "solid-js";
+
+const GlobalPinMap = lazy(() => import("../components/GlobalPinMap"));
 
 
 function formatDateTimeMyWay(date: Date, timeZone='America/Halifax') {
@@ -39,7 +40,9 @@ export function indexHtml() {
       <div class="mx-4 my-2 border border-stone-400 p-0.5">
         <div class="p-2 text-center">{formatDateTimeMyWay(now())}</div>
         <div class="h-100">
-          <GlobalPinMap lat={44.647} lng={-63.580} />
+          <Suspense fallback={<p>Loading map...</p>}>
+            <GlobalPinMap lat={44.647} lng={-63.580} />
+          </Suspense>
         </div>
       </div>
 
