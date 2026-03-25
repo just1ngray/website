@@ -59,6 +59,7 @@ export function Nav() {
         <NavItem href="/programming/jgit.sh" />
         <NavItem href="/programming/jfswatch.rs" />
         <NavItem href="/programming/pytestdir.py" />
+        <NavItem href="/programming/website" />
         <NavItem href="/programming/covidexposures.ca" />
       </NavFolder>
 

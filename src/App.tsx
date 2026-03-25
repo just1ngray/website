@@ -12,6 +12,7 @@ import { JFSWatch } from './pages/programming/jfswatch';
 import { JPGray } from './pages/programming/jpgray';
 import { CovidExposures } from './pages/programming/covidexposures';
 import { Pytestdir } from './pages/programming/pytestdir';
+import { Website } from './pages/programming/website';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/programming/jfswatch.rs" component={JFSWatch} />
         <Route path="/programming/pytestdir.py" component={Pytestdir} />
         <Route path="/programming/covidexposures.ca" component={CovidExposures} />
+        <Route path="/programming/website" component={Website} />
         <Route path="/3dprinting/readme.md" component={ReadmeMd} />
 
         <Route path="/*" component={indexHtml} />
