@@ -1,7 +1,7 @@
 import { createSignal, ParentProps, Show } from "solid-js";
 import { A, useLocation } from "@solidjs/router";
 import { ChevronIcon } from "../icons/Chevron";
-import { CodeIcon } from "../icons/Code";
+import { CodeIcon } from "../icons/CodeIcon";
 
 
 function NavItem(props: { name?: string, href: string, }) {
@@ -56,6 +56,7 @@ export function Nav() {
       <NavFolder name="Programming">
         <NavItem href="/programming/pyfig.py" />
         <NavItem href="/programming/jgit.sh" />
+        <NavItem href="/programming/jfswatch.rs" />
       </NavFolder>
 
       <NavFolder name="3D Printing">
