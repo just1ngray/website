@@ -12,7 +12,7 @@ export function Layout(props: ParentProps) {
   const location = useLocation();
 
   return (
-    <div class="min-h-dvh flex flex-col bg-stone-800 text-stone-200">
+    <div class="min-h-dvh flex flex-col bg-stone-800 text-stone-300">
       <div class="flex-1 flex flex-row">
         {/* external links and a dummy 'home' link  */}
         <div class="text-stone-400 p-1 flex flex-col gap-2">
