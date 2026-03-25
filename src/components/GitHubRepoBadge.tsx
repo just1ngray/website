@@ -55,14 +55,25 @@ export function GitHubRepoBadge(props: { owner: string, repo: string }) {
         <div class="flex border border-stone-400 rounded-lg overflow-clip">
           <For each={Object.entries(repo()!.languages)}>
             {(entry) => {
-              const percent100 = Math.max(1, Math.round(entry[1] / repo()!.languagesLineSum * 100));
+              const percent100 = entry[1] / repo()!.languagesLineSum * 100;
+              let displayPercent;
+              if (percent100 > 1) {
+                displayPercent = Math.round(percent100);
+              }
+              else if (percent100 > 0.1) {
+                displayPercent = percent100.toPrecision(1);
+              }
+              else {
+                displayPercent = "<0.1";
+              }
+
               return (
                 <div
                   style={{ width: `${percent100}%` }}
                   class={`${LANGUAGE_COLOURS[entry[0]] || ""} p-1 font-bold text-center overflow-hidden text-ellipsis min-w-fit`}
                 >
                   {entry[0]}&nbsp;<br class="sm:hidden" />
-                  ({percent100}%)
+                  ({displayPercent}%)
                 </div>
               );
             }
@@ -101,7 +112,7 @@ const LANGUAGE_COLOURS: Record<string, string> = {
   "Shell": "bg-green-400 text-green-900",
   "PowerShell": "bg-blue-500 text-white",
   "HTML": "bg-orange-500 text-white",
-  "CSS": "bg-blue-400 text-blue-900",
+  "CSS": "bg-purple-900 text-purple-400",
   "SCSS": "bg-pink-400 text-pink-900",
   "Vue": "bg-emerald-400 text-emerald-900",
   "Svelte": "bg-orange-500 text-white",
