@@ -38,7 +38,7 @@ export function Layout(props: ParentProps) {
 
         {/* main window */}
         <div class={`grow ${smallNavOpen() ? "hidden md:inline-block" : ""}`}>
-          <div class="p-2 flex flex-row items-center text-stone-400">
+          <div class="p-2 flex flex-row flex-wrap items-center text-stone-400">
             <span>{window.location.origin}</span>
             <For each={(location.pathname.substring(1) || "index.html").split("/")}>
               {part => <>
