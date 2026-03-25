@@ -15,7 +15,7 @@ function NavItem(props: { name?: string, href: string, }) {
         `} />
         <div class="relative flex flex-row">
           <div class="mr-1"><CodeIcon /></div>
-          <span>{props.name || props.href.slice(1)}</span>
+          <span>{props.name || props.href.split("/").slice(-1)}</span>
         </div>
       </div>
     </A>
@@ -54,7 +54,8 @@ export function Nav() {
       <NavItem href="/" name="index.html" />
 
       <NavFolder name="Programming">
-        <NavItem href="/programming/pyfig.html" name="Pyfig" />
+        <NavItem href="/programming/pyfig.py" />
+        <NavItem href="/programming/jgit.sh" />
       </NavFolder>
 
       <NavFolder name="3D Printing">

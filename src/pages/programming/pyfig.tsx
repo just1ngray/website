@@ -1,4 +1,5 @@
 import { GitHubRepoBadge } from "../../components/GitHubRepoBadge";
+import { Code } from "../../components/Code";
 
 
 export function Pyfig() {
@@ -13,8 +14,8 @@ export function Pyfig() {
       </p>
 
       <p>
-        You can read all about it on the project's README.md on GitHub, but here are a few reasons why I personally
-        like it so much:
+        You can read all about it on the project's <Code>README.md</Code> on GitHub, but here are a few reasons why I
+        personally like it so much:
       </p>
       <ol class="list-decimal list-outside pl-6 space-y-2">
         <li>
@@ -34,9 +35,8 @@ export function Pyfig() {
 
       <p>
         This library is installable through <a class="underline" href="https://pypi.org/project/jpyfig/">Pypi</a>. The
-        only catch is that I <i>really</i> wanted to import it as&nbsp;
-        <a class="border px-1 border-stone-400 rounded">pyfig</a> but that package name was already taken. So it has
-        to be installed with <a class="border px-1 border-stone-400 rounded">pip install jpyfig</a>.
+        only catch is that I <i>really</i> wanted to import it as <Code>pyfig</Code> but that package name was already
+        taken. So it has to be installed with <Code>pip install jpyfig</Code>.
       </p>
     </div>
   );
