@@ -55,6 +55,7 @@ export function Nav() {
 
       <NavFolder name="Programming">
         <NavItem href="/programming/pyfig.py" />
+        <NavItem href="/programming/jpgray.ca" />
         <NavItem href="/programming/jgit.sh" />
         <NavItem href="/programming/jfswatch.rs" />
       </NavFolder>

@@ -9,6 +9,7 @@ import { ReadmeMd } from './pages/3dprinting/Readme-md';
 import { Pyfig } from './pages/programming/pyfig';
 import { JGit } from './pages/programming/jgit';
 import { JFSWatch } from './pages/programming/jfswatch';
+import { JPGray } from './pages/programming/jpgray';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Route component={Layout}>
         <Route path="/" component={indexHtml} />
         <Route path="/programming/pyfig.py" component={Pyfig} />
+        <Route path="/programming/jpgray.ca" component={JPGray} />
         <Route path="/programming/jgit.sh" component={JGit} />
         <Route path="/programming/jfswatch.rs" component={JFSWatch} />
         <Route path="/3dprinting/readme.md" component={ReadmeMd} />
