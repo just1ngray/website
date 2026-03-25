@@ -50,7 +50,7 @@ export function Layout(props: ParentProps) {
 
           <hr class="text-stone-400" />
 
-          <main class="p-2">
+          <main class="p-2 max-w-300">
             {props.children}
           </main>
         </div>
