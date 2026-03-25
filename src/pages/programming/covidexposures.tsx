@@ -8,7 +8,7 @@ export function CovidExposures() {
       <GitHubRepoBadge owner="just1ngray" repo="covidexposures" />
 
       <p>
-        Back before ChatGPT, I threw this full-stack application together in roughly two weeks both as a tech project
+        Back before ChatGPT, I threw this full-stack application together in a few weeks both as a tech project
         but also as a better way to view COVID exposure locations. Previously, you'd have to manually check all
         exposure locations on the NS Health website every day if you wanted to stay informed. And back in spring of
         2021, pretty much everyone was worried and wanted to stay up to date.
