@@ -1,32 +1,36 @@
 # website
 
-Personal landing page
+Personal landing page. Looks like a code editor.
 
-## Usage
+## Getting started
 
-```bash
-$ npm install # or pnpm install or yarn install
+1. Run `git lfs pull`
+2. In v2.7.7 of [deno](https://deno.com/), install the dependencies by running `deno install`
+3. Start the development server on localhost using `deno run dev`
+
+## Build static files
+
+Run: `deno run build`. Then `dist/` can be deployed as a static website just about anywhere 
+([GitHub Pages](https://pages.github.com/), [Cloudflare Pages](https://pages.cloudflare.com/), etc.).
+
+It also outputs a `build.stats.html` which can be opened to view the bundle.
+
+## Local docker
+
+```shell
+# build the image
+docker build -t website .
+
+# run the website available at http://localhost:8080
+docker run --rm -p 8080:80 website
 ```
 
-### Learn more on the [Solid Website](https://solidjs.com) and come chat with us on our [Discord](https://discord.com/invite/solidjs)
+## Automations
 
-## Available Scripts
+### Build and Push Docker Image
 
-In the project directory, you can run:
+[This pipeline](.github/workflows/build.yml) runs whenever commits get pushed into master. It automatically builds the
+image and pushes it to [ghcr.io/just1ngray/website](ghcr.io/just1ngray/website) with the commit hash as the tag.
 
-### `npm run dev`
-
-Runs the app in the development mode.<br>
-Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
-
-### `npm run build`
-
-Builds the app for production to the `dist` folder.<br>
-It correctly bundles Solid in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-## Deployment
-
-Learn more about deploying your application with the [documentations](https://vite.dev/guide/static-deploy.html)
+(I also want to automate deployment into [jpgray.ca](https://github.com/just1ngray/jpgray.ca) but this site isn't 
+totally ready for that just yet!)
