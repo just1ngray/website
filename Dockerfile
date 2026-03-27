@@ -3,7 +3,7 @@
 FROM denoland/deno:2.7.7 AS builder
 WORKDIR /website
 # install dependencies
-COPY deno.json deno.lock /website/
+COPY package.json deno.lock /website/
 RUN deno install
 # complete the build
 COPY . /website
