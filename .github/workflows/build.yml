@@ -63,6 +63,8 @@ jobs:
 
       - name: Build
         run: deno run build
+        env:
+          VITE_BASE_URL: /website/
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

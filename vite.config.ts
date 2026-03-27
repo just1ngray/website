@@ -20,4 +20,5 @@ export default defineConfig({
                 .map(filepath => [filepath.slice("public".length), fs.statSync(filepath).size])
         ),
     },
+    base: process.env.VITE_BASE_URL ?? "/",
 });
