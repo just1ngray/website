@@ -13,12 +13,14 @@ import { JPGray } from './pages/programming/jpgray';
 import { CovidExposures } from './pages/programming/covidexposures';
 import { Pytestdir } from './pages/programming/pytestdir';
 import { Website } from './pages/programming/website';
+import { HoneyDripper } from './pages/3dprinting/HoneyDripper';
 
 function App() {
   return (
     <Router>
       <Route component={Layout}>
         <Route path="/" component={indexHtml} />
+
         <Route path="/programming/pyfig.py" component={Pyfig} />
         <Route path="/programming/jpgray.ca" component={JPGray} />
         <Route path="/programming/jgit.sh" component={JGit} />
@@ -26,7 +28,9 @@ function App() {
         <Route path="/programming/pytestdir.py" component={Pytestdir} />
         <Route path="/programming/covidexposures.ca" component={CovidExposures} />
         <Route path="/programming/website" component={Website} />
+
         <Route path="/3dprinting/readme.md" component={ReadmeMd} />
+        <Route path="/3dprinting/honey-dripper" component={HoneyDripper} />
 
         <Route path="/*" component={indexHtml} />
       </Route>

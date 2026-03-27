@@ -2,7 +2,7 @@
 
 export function ReadmeMd() {
   return (
-    <div class="flex flex-col gap-4 p-2 font-mono">
+    <div class="flex flex-col gap-4 p-2">
       <h1 class="text-2xl"># 3D Printing</h1>
       <p>I am fortunate to have a Bambu Lab A1 3D printer.</p>
       <p>
@@ -21,7 +21,7 @@ export function ReadmeMd() {
         <li>Oh yeah, and it has to not crash all the time</li>
       </ol>
       <p>
-        After some consideration, I've chosen to use <a href="https://www.freecad.org/" class="underline">FreeCAD</a>
+        After some consideration, I've chosen to use <a href="https://www.freecad.org/" class="underline">FreeCAD</a>&nbsp;
         for developing my custom models. It took some getting used to, and I'm not sure I'll ever conquer 'Wire not
         closed' errors, but it's clear to me parametric modelling is incredibly powerful and something I want to get
         better at.

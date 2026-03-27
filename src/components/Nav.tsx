@@ -64,7 +64,8 @@ export function Nav() {
       </NavFolder>
 
       <NavFolder name="3D Printing">
-        <NavItem href="/3dprinting/README.md" name="README.md" />
+        <NavItem href="/3dprinting/README.md" />
+        <NavItem href="/3dprinting/honey-dripper" name="Honey Dripper" />
       </NavFolder>
     </div>
   );
