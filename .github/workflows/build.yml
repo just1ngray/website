@@ -30,3 +30,5 @@ jobs:
           context: .
           push: true
           tags: ghcr.io/just1ngray/website:${{ github.sha }}
+          cache-from: type=registry,ref=ghcr.io/just1ngray/website:cache
+          cache-to: type=registry,ref=ghcr.io/just1ngray/website:cache,mode=max
