@@ -35,5 +35,5 @@ jobs:
           tags: |
             ghcr.io/just1ngray/website:${{ github.sha }}
             ghcr.io/just1ngray/website:latest
-          cache-from: type=registry,ref=ghcr.io/just1ngray/website:cache
-          cache-to: type=registry,ref=ghcr.io/just1ngray/website:cache,mode=max
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
