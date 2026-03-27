@@ -1,11 +1,11 @@
-name: Build and Push Docker Image
+name: Build and Push
 
 on:
   push:
     branches: [master]
 
 jobs:
-  build:
+  docker:
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -37,3 +37,38 @@ jobs:
             ghcr.io/just1ngray/website:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
+
+  pages:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout with LFS
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Set up Deno
+        uses: denoland/setup-deno@v2
+
+      - name: Install dependencies
+        run: deno install
+
+      - name: Build
+        run: deno run build
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

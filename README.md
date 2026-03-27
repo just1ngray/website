@@ -27,10 +27,13 @@ docker run --rm -p 8080:80 website
 
 ## Automations
 
-### Build and Push Docker Image
+### Build and Push
 
-[This pipeline](.github/workflows/build.yml) runs whenever commits get pushed into master. It automatically builds the
-image and pushes it to [ghcr.io/just1ngray/website](ghcr.io/just1ngray/website) with the commit hash as the tag.
+[This pipeline](.github/workflows/build.yml) runs whenever commits get pushed into master. It will:
+
+1. Build the docker image and push it to [ghcr.io/just1ngray/website](ghcr.io/just1ngray/website) with the commit hash 
+   as the tag
+2. Build the static site and deploy it to GitHub Pages at [https://just1ngray.github.io/website/](https://just1ngray.github.io/website/)
 
 (I also want to automate deployment into [jpgray.ca](https://github.com/just1ngray/jpgray.ca) but this site isn't 
 totally ready for that just yet!)
