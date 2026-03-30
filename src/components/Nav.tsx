@@ -63,10 +63,11 @@ export function Nav() {
         <NavItem href="/programming/covidexposures.ca" />
       </NavFolder>
 
-      <NavFolder name="3D Printing">
+      {/* temporarily disable the 3d printing section navigation section while it's under construction */}
+      {/*<NavFolder name="3D Printing">
         <NavItem href="/3dprinting/README.md" />
         <NavItem href="/3dprinting/honey-dripper" name="Honey Dripper" />
-      </NavFolder>
+      </NavFolder>*/}
     </div>
   );
 }
