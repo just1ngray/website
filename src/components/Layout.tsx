@@ -57,8 +57,11 @@ export function Layout(props: ParentProps) {
       </div>
 
       <div class="bg-stone-700 px-4 flex flex-col sm:flex-row sm:justify-between sm:items-center">
-        <div class="pb-2 md:pb-0">Me and CSS have... an understanding :)</div>
+        <div class="pb-2 md:pb-0">Me + CSS = 😬</div>
         <div class="flex flex-col sm:flex-row gap-2">
+          <a href="https://listless.jpgray.ca">
+            <div class="p-1 hover:bg-stone-600">Listless</div>
+          </a>
           <a href="https://grafana.jpgray.ca">
             <div class="p-1 hover:bg-stone-600">Grafana</div>
           </a>
